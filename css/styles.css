@@ -31,6 +31,10 @@ a:visited {
 address {
   font-style: normal;
 }
+
+img {
+  display: block;
+}
 /*Основные стили*/
 .body-studio,
 .body-portfolio {
@@ -50,6 +54,7 @@ address {
   padding-right: 215px;
   width: 1600px;
 }
+
 /*Стили для шапки сайта*/
 .header-site {
   display: flex;
@@ -169,10 +174,19 @@ address {
 }
 .features li {
   width: 270px;
-  height: 101px;
 }
 .features li:not(:last-child) {
   margin-right: 30px;
+}
+.features li::before {
+  content: '';
+
+  display: block;
+  margin-bottom: 30px;
+  height: 120px;
+
+  background-color: var(--secondary-decor-color);
+  border-radius: 4px;
 }
 .features h3 {
   margin: 0px;
@@ -226,7 +240,7 @@ address {
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 90px;
+  margin-bottom: 94px;
 }
 
 /* стили для секции наша команда*/
@@ -257,7 +271,7 @@ address {
 .our-team ul {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 90px;
+  margin-bottom: 94px;
 }
 
 .our-team li {
@@ -272,8 +286,12 @@ address {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
+.our-team div {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .our-team h3 {
+  margin: 0px;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -284,6 +302,8 @@ address {
   text-transform: capitalize;
 }
 .our-team h4 {
+  margin-top: 10px;
+  margin-bottom: 0px;
   color: var(--text-color);
 
   font-weight: normal;
@@ -393,8 +413,12 @@ address {
   width: 370px;
   height: 404px;
 }
+.item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .item div {
-  margin: 16px 24px 20px 24px;
+  margin: 20px 24px;
 }
 .item h3 {
   margin: 0px;
