@@ -8,6 +8,7 @@
   --secondary-decor-color: #f5f4fa;
   --border-color: #eeeeee;
   --border-head-color: #ececec;
+  --team-contacts: #afb1b8;
 }
 /*изменение стандартных ситилей*/
 
@@ -97,11 +98,28 @@ img {
 .header-links-contacts li:not(:last-child) {
   margin-right: 50px;
 }
-
+.header-links-contacts a {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  fill: var(--text-color);
+}
+.envelope svg {
+  width: 16px;
+  margin-right: 10px;
+}
+.smartphone svg {
+  width: 10px;
+  margin-right: 10px;
+}
+.header-links-contacts a:visited {
+  color: var(--text-color);
+}
 .header-site a:hover,
 .header-site a:focus,
 .header-site a:active code {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /*Стили для заглавной секции*/
@@ -187,6 +205,21 @@ img {
 
   background-color: var(--secondary-decor-color);
   border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px;
+}
+.icon-first::before {
+  background-image: url(../images/antenna.svg);
+}
+.icon-second::before {
+  background-image: url(../images/clock.svg);
+}
+.icon-third::before {
+  background-image: url(../images/diagram.svg);
+}
+.icon-fourth::before {
+  background-image: url(../images/astronaut.svg);
 }
 .features h3 {
   margin: 0px;
@@ -268,16 +301,15 @@ img {
 .our-team h2::first-letter {
   text-transform: capitalize;
 }
-.our-team ul {
+.our-team > ul {
   display: flex;
   justify-content: space-between;
   margin-bottom: 94px;
 }
 
-.our-team li {
+.card > li {
   background-color: var(--main-color);
   width: 270px;
-  height: 378px;
 
   background: #ffffff;
   /* material shadow v1 */
@@ -288,7 +320,7 @@ img {
 }
 .our-team div {
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 .our-team h3 {
   margin: 0px;
@@ -317,15 +349,86 @@ img {
 .our-team span {
   text-transform: uppercase;
 }
+.our-team-contacts {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.our-team-contacts li:not(:first-child) {
+  margin-left: 10px;
+}
+.our-team-contacts a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  fill: var(--team-contacts);
+}
+
+.our-team-contacts svg {
+  width: 20px;
+  height: 20px;
+}
+.our-team-contacts a:hover,
+.our-team-contacts a:focus,
+.our-team-contacts a:active {
+  fill: var(--main-color);
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+/*Стили для секции постоянные клиенты*/
+.constant-client {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.constant-client h2 {
+  margin-top: 94px;
+  align-self: center;
+}
+.constant-client ul {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  margin-bottom: 94px;
+}
+.constant-client li:not(:first-child) {
+  margin-left: 30px;
+}
+.constant-client a {
+  fill: var(--team-contacts);
+}
+.constant-client svg {
+  border: 1px;
+  width: 170px;
+  border-color: var(--team-contacts);
+  height: 90px;
+}
+.constant-client a:hover {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
 /*стили для секции подвал*/
 .footer-site {
+  display: flex;
+
   background-color: var(--first-decor-color);
   font-weight: normal;
 
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
+.address {
+  width: 231px;
+  margin-right: 70px;
+}
+.address > a {
+  display: flex;
+  align-items: center;
+  width: 145px;
+  height: 31px;
+}
 .address-company {
   margin-top: 20px;
 }
@@ -347,7 +450,46 @@ img {
   letter-spacing: 0.03em;
   color: rgba(100%, 100%, 100%, 60%);
 }
+.footer-site h3 {
+  margin-top: 12px;
+  color: var(--main-color);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.address-company-public {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.address-company-public li:not(:first-child) {
+  margin-left: 10px;
+}
+.address-company-public a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  fill: var(--main-color);
+}
 
+.address-company-public svg {
+  width: 20px;
+  height: 20px;
+}
+.address-company-public a:hover,
+.address-company-public a:focus,
+.address-company-public a:active {
+  fill: var(--main-color);
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
 /*CSS Портфолио*/
 .main-portfolio {
   display: flex;

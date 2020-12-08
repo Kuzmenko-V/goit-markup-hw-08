@@ -30,8 +30,22 @@
         </nav>
         <!--Ссылки позвонить и отправить почту-->
         <ul class="header-links-contacts">
-            <li><a href="#">info@devstudio.com</a></li>
-            <li><a href="#">+38 096 111 11 11</a></li>
+            <li > 
+                <a class="envelope" href="#">
+                    <svg>
+                        <use href="./images/icon.svg#icon-envelope"></use>
+                    </svg>
+                    info@devstudio.com
+                </a>
+            </li>
+            <li>
+                <a class="smartphone" href="#">
+                    <svg>
+                        <use href="./images/icon.svg#icon-smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11
+                </a>
+            </li>
         </ul>
     </header>
     <!--Тело основной страници-->
@@ -45,19 +59,19 @@
         <section class="features container">
             <!--<h2></h2>-->
             <ul>
-                <li class="i">
+                <li class="icon-first">
                     <h3>внимание к деталям</h3>
                     <p>идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                 </li>
-                <li>
+                <li class="icon-second">
                     <h3>пунктуальность</h3>
                     <p>задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
                 </li>
-                <li>
+                <li class="icon-third">
                     <h3>планирование</h3>
                     <p>равным образом консультация с широким активом в значительной степени обуславливает.</p>
                 </li>
-                <li>
+                <li class="icon-fourth">
                     <h3>современные технологии</h3>
                     <p>значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                 </li>
@@ -81,13 +95,43 @@
         <!--Секция наша команда-->
         <section class="our-team container">
             <h2>наша команда</h2>
-            <ul>
+            <ul class="card">
                 <li>
                     <img width="270" src="./images/img_worker_1.jpg" alt="Фото сотрудника">
                     <div>
                         <h3>игорь демьяненко</h3>
                         <h4 lang="en">product designer</h4>
                     </div>
+                    <ul class="our-team-contacts">
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <img width="270" src="./images/img_worker_2.jpg" alt="Фото сотрудника">
@@ -95,6 +139,36 @@
                         <h3>ольга репина</h3>
                         <h4 lang="en">frontend developer</h4>
                     </div>
+                    <ul class="our-team-contacts">
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <img width="270" src="./images/img_worker_3.jpg" alt="Фото сотрудника">
@@ -102,11 +176,119 @@
                         <h3>николай тарасов</h3>
                         <h4 lang="en">marketing</h4>
                     </div>
+                    <ul class="our-team-contacts">
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <img width="270" src="./images/img_worker_4.jpg" alt="Фото сотрудника">
                     <div><h3>михаил ермаков</h3>
                     <h4 lang="en"><span>ui</span> designer</h4></div>
+                    <ul class="our-team-contacts">
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <!--Секция постоянные клиенты-->
+        <section class="constant-client container">
+            <h2>Постоянные клиенты</h2>
+            <ul>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="./images/icon.svg#icon-client1"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="./images/icon.svg#icon-client2"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="./images/icon.svg#icon-client3"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="./images/icon.svg#icon-client4"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="./images/icon.svg#icon-client5"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="./images/icon.svg#icon-client6"></use>
+                        </svg>
+                    </a>
                 </li>
             </ul>
         </section>
@@ -114,17 +296,53 @@
     <!--Подвал-->
     <footer class="footer-site container">
         <!--Ссылка логотип-->
-        <a href="./index.html">
-            <img src="./images/logo2.svg" alt="WebStudio">
-        </a>
-        <!--Адрес компании-->
-        <address>
-            <ul class="address-company">
-                <li><span>г. Киев, пр-т Леси Украинки, 26</span></li>
-                <li><span>info@devstudio.com</span></li>
-                <li><span>+38 096 111 11 11</span></li>
+        <div class="address">
+            <a href="./index.html">
+                <img src="./images/logo2.svg" alt="WebStudio">
+            </a>
+            <!--Адрес компании-->
+            <address>
+                <ul class="address-company">
+                    <li><span>г. Киев, пр-т Леси Украинки, 26</span></li>
+                    <li><span>info@devstudio.com</span></li>
+                    <li><span>+38 096 111 11 11</span></li>
+                </ul>
+            </address>
+        </div>
+        <div">
+            <!--<h2></h2>-->
+            <h3>присоединяйтесь</h3>
+            <ul class="address-company-public">
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="./images/icon.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="./images/icon.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="./images/icon.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="./images/icon.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
             </ul>
-        </address>
+        </div>
     </footer>
-</body>
+   </body>
 </html>
