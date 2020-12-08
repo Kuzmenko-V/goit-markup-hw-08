@@ -103,6 +103,7 @@ img {
   align-content: center;
   align-items: center;
   fill: var(--text-color);
+  color: var(--text-color);
 }
 .envelope svg {
   width: 16px;
@@ -191,36 +192,26 @@ img {
   width: 1170px;
 }
 .features li {
-  width: 270px;
+  display: block;
 }
 .features li:not(:last-child) {
   margin-right: 30px;
 }
-.features li::before {
-  content: '';
-
-  display: block;
-  margin-bottom: 30px;
-  height: 120px;
-
+.features div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--secondary-decor-color);
   border-radius: 4px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70px;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
 }
-.icon-first::before {
-  background-image: url(../images/antenna.svg);
+.features svg {
+  width: 70px;
+  height: 70px;
 }
-.icon-second::before {
-  background-image: url(../images/clock.svg);
-}
-.icon-third::before {
-  background-image: url(../images/diagram.svg);
-}
-.icon-fourth::before {
-  background-image: url(../images/astronaut.svg);
-}
+
 .features h3 {
   margin: 0px;
 
@@ -397,12 +388,17 @@ img {
   margin-left: 30px;
 }
 .constant-client a {
+  display: flex;
+  padding: 0px;
+  width: 170px;
+  height: 90px;
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: var(--team-contacts);
   fill: var(--team-contacts);
 }
 .constant-client svg {
-  border: 1px;
   width: 170px;
-  border-color: var(--team-contacts);
   height: 90px;
 }
 .constant-client a:hover {
