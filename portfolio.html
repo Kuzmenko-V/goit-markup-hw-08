@@ -11,174 +11,200 @@
 </head>
 <body class="body-portfolio">
     <!--Шапка сайта-->
-    <header class="header-site container">
-        <nav class="header-nav">
-            <!--Логотип ссылка-->
-            <a href="./index.html"><img src="./images/logo1.svg" alt="WebStudio"></a>
-            <!--Ссылки по сайту-->
-            <ul class="header-links-pages">
-                <li><a href="./index.html">
-                        <p>студия</p>
-                    </a></li>
-                <li><a class="site-page-current" href="./portfolio.html">
-                        <p>портфолио</p>
-                    </a></li>
-                <li><a href="#">
-                        <p>контакты</p>
-                    </a></li>
+    <header class="header-site">
+        <div class="container">
+            <nav class="header-nav">
+                <!--Логотип ссылка-->
+                <a href="./index.html"><img src="./images/logo1.svg" alt="WebStudio"></a>
+                <!--Ссылки по сайту-->
+                <ul class="header-links-pages">
+                    <li><a href="./index.html">
+                            <p>студия</p>
+                        </a></li>
+                    <li><a class="site-page-current" href="./portfolio.html">
+                            <p>портфолио</p>
+                        </a></li>
+                    <li><a href="#">
+                            <p>контакты</p>
+                        </a></li>
+                </ul>
+            </nav>
+            <!--Ссылки позвонить и отправить почту-->
+            <ul class="header-links-contacts">
+                <li>
+                    <a class="envelope" href="mailto:info@devstudio.com">
+                        <svg>
+                            <use href="./images/icon.svg#icon-envelope"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
+                </li>
+                <li>
+                    <a class="smartphone" href="tel:+380961111111">
+                        <svg>
+                            <use href="./images/icon.svg#icon-smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
+                </li>
             </ul>
-        </nav>
-        <!--Ссылки позвонить и отправить почту-->
-        <ul class="header-links-contacts">
-            <li > 
-                <a class="envelope" href="mailto:info@devstudio.com">
-                    <svg>
-                        <use href="./images/icon.svg#icon-envelope"></use>
-                    </svg>
-                    info@devstudio.com
-                </a>
-            </li>
-            <li>
-                <a class="smartphone" href="tel:+380961111111">
-                    <svg>
-                        <use href="./images/icon.svg#icon-smartphone"></use>
-                    </svg>
-                    +38 096 111 11 11
-                </a>
-            </li>
-        </ul>
+        </div>
     </header>
     <!--Тело основной страници-->
-    <main class="main-portfolio container">
+    <main class="main-portfolio">
         <!--<h2></h2>-->
         <section>
-            <ul class="portfolio-filters">
-                <li><button class="filter"><span>все</span></button></li>
-                <li><button class="filter"><span>веб-</span>сайты</button></li>
-                <li><button class="filter"><span>приложения</span></button></li>
-                <li><button class="filter"><span>дизайн</span></button></li>
-                <li><button class="filter"><span>маркетинг</span></button></li>
-            </ul>
+           <div class="container">
+                <ul class="portfolio-filters">
+                    <li><button class="filter"><span>все</span></button></li>
+                    <li><button class="filter"><span>веб-</span>сайты</button></li>
+                    <li><button class="filter"><span>приложения</span></button></li>
+                    <li><button class="filter"><span>дизайн</span></button></li>
+                    <li><button class="filter"><span>маркетинг</span></button></li>
+                </ul>
+           </div>
         </section>
         <section>
-            <ul class="portfolio-item">
-                <li class="item">
-                    <img width="370" src="./images/img-portfolio-1.jpg" alt="Фото портфолио 1">
-                    <div>
-                        <h3>технокряк</h3>
-                        <h4>веб-сайт</h4>
-                    </div>
-                </li>
-                <li class="item">
-                    <img width="370" src="./images/img-portfolio-2.jpg" alt="Фото портфолио 2">
-                    <div>
-                        <h3>постер new orlean <span>vs</span> golden star</h3>
-                        <h4>дизайн</h4>
-                    </div>
-                </li>
-                <li class="item">
-                    <img width="370" src="./images/img-portfolio-3.jpg" alt="Фото портфолио 3">
-                    <div>
-                        <h3>ресторан seafood</h3>
-                        <h4>приложение</h4>
-                    </div>
-                </li>
-                <li class="item">
-                    <img width="370" src="./images/img-portfolio-4.jpg" alt="Фото портфолио 4">
-                    <div>
-                        <h3>проект prime</h3>
-                        <h4>маркетинг</h4>
-                    </div>
-                </li>
-                <li class="item">
-                    <img width="370" src="./images/img-portfolio-5.jpg" alt="Фото портфолио 5">
-                    <div>
-                        <h3>проект boxes</h3>
-                        <h4>приложение</h4>
-                    </div>
-                </li>
-                <li class="item">
-                    <img width="370" src="./images/img-portfolio-6.jpg" alt="Фото портфолио 6">
-                    <div>
-                        <h3>inspiration <span>has no</span> borders</h3>
-                        <h4>веб-сайт</h4>
-                    </div>
-                </li>
-                <li class="item">
-                    <img width="370" src="./images/img-portfolio-7.jpg" alt="Фото портфолио 7">
-                    <div>
-                        <h3>издание limited edition</h3>
-                        <h4>дизайн</h4>
-                    </div>
-                </li>
-                <li class="item">
-                    <img width="370" src="./images/img-portfolio-8.jpg" alt="Фото портфолио 8">
-                    <div>
-                        <h3>проект <span class="text-height">lab</span></h3>
-                        <h4>маркетинг</h4>
-                    </div>
-                </li>
-                <li class="item">
-                    <img width="370" height="294" src="./images/img-portfolio-9.jpg" alt="Фото портфолио 9">
-                    <div>
-                        <h3>growing business</h3>
-                        <h4>приложение</h4>
-                    </div>
-                </li>
-            </ul>
+            <div class="container">
+                <ul class="portfolio-item">
+                    <li class="item">
+                        <a href="#">
+                            <img width="370" src="./images/img-portfolio-1.jpg" alt="Фото портфолио 1">
+                            <div>
+                                <h3>технокряк</h3>
+                                <h4>веб-сайт</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img width="370" src="./images/img-portfolio-2.jpg" alt="Фото портфолио 2">
+                            <div>
+                                <h3>постер new orlean <span>vs</span> golden star</h3>
+                                <h4>дизайн</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img width="370" src="./images/img-portfolio-3.jpg" alt="Фото портфолио 3">
+                            <div>
+                                <h3>ресторан seafood</h3>
+                                <h4>приложение</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img width="370" src="./images/img-portfolio-4.jpg" alt="Фото портфолио 4">
+                            <div>
+                                <h3>проект prime</h3>
+                                <h4>маркетинг</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img width="370" src="./images/img-portfolio-5.jpg" alt="Фото портфолио 5">
+                            <div>
+                                <h3>проект boxes</h3>
+                                <h4>приложение</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img width="370" src="./images/img-portfolio-6.jpg" alt="Фото портфолио 6">
+                            <div>
+                                <h3>inspiration <span>has no</span> borders</h3>
+                                <h4>веб-сайт</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img width="370" src="./images/img-portfolio-7.jpg" alt="Фото портфолио 7">
+                            <div>
+                                <h3>издание limited edition</h3>
+                                <h4>дизайн</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img width="370" src="./images/img-portfolio-8.jpg" alt="Фото портфолио 8">
+                            <div>
+                                <h3>проект <span class="text-height">lab</span></h3>
+                                <h4>маркетинг</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img width="370" src="./images/img-portfolio-9.jpg" alt="Фото портфолио 9">
+                            <div>
+                                <h3>growing business</h3>
+                                <h4>приложение</h4>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
                 
     </main>
     <!--Подвал-->
-    <footer class="footer-site container">
-        <!--Ссылка логотип-->
-        <div class="address">
-            <a href="./index.html">
-                <img src="./images/logo2.svg" alt="WebStudio">
-            </a>
-            <!--Адрес компании-->
-            <address>
-                <ul class="address-company">
-                    <li><span>г. Киев, пр-т Леси Украинки, 26</span></li>
-                    <li><span>info@devstudio.com</span></li>
-                    <li><span>+38 096 111 11 11</span></li>
-                </ul>
-            </address>
-        </div>
-        <div">
-            <!--<h2></h2>-->
-            <h3>присоединяйтесь</h3>
-            <ul class="address-company-public">
-                <li>
-                    <a href="#">
-                        <svg>
-                            <use href="./images/icon.svg#icon-instagram"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <svg>
-                            <use href="./images/icon.svg#icon-twitter"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <svg>
-                            <use href="./images/icon.svg#icon-facebook"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <svg>
-                            <use href="./images/icon.svg#icon-linkedin"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
+    <footer class="footer-site">
+        <div class="container">
+            <!--Ссылка логотип-->
+            <div class="address">
+                <a href="./index.html">
+                    <img src="./images/logo2.svg" alt="WebStudio">
+                </a>
+                <!--Адрес компании-->
+                <address>
+                    <ul class="address-company">
+                        <li><span>г. Киев, пр-т Леси Украинки, 26</span></li>
+                        <li><span>info@devstudio.com</span></li>
+                        <li><span>+38 096 111 11 11</span></li>
+                    </ul>
+                </address>
             </div>
+            <div">
+                <!--<h2></h2>-->
+                <h3>присоединяйтесь</h3>
+                <ul class="address-company-public">
+                    <li>
+                        <a href="#">
+                            <svg>
+                                <use href="./images/icon.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg>
+                                <use href="./images/icon.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg>
+                                <use href="./images/icon.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg>
+                                <use href="./images/icon.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+        </div>
     </footer>
 </body>
 </html>

@@ -41,9 +41,9 @@ img {
 .body-portfolio {
   font-family: 'Roboto';
   font-style: normal;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header-links-pages .site-page-current {
@@ -51,17 +51,15 @@ img {
 }
 
 .container {
-  padding-left: 215px;
-  padding-right: 215px;
-  width: 1600px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*Стили для шапки сайта*/
 .header-site {
-  display: flex;
-  justify-content: space-between;
-  height: 80px;
-
   background-color: var(--main-color);
   border: 1px solid var(--border-head-color);
   font-weight: 500;
@@ -69,6 +67,11 @@ img {
   line-height: 1.14;
   /* or 114% */
   letter-spacing: 0.02em;
+}
+.header-site > div {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
 }
 .header-nav {
   display: flex;
@@ -125,11 +128,14 @@ img {
 
 /*Стили для заглавной секции*/
 .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 1600px;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
 
   background-color: var(--first-decor-color);
   background-image: linear-gradient(
@@ -139,6 +145,12 @@ img {
     ),
     url('../images/bg-hero.jpg');
   color: var(--main-color);
+}
+.hero > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .hero h1 {
   display: inline-block;
@@ -197,7 +209,7 @@ img {
 .features li:not(:last-child) {
   margin-right: 30px;
 }
-.features div {
+.features li > div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,13 +251,15 @@ img {
 }
 /* стили для секции виды работ*/
 .work-profile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding-bottom: 94px;
 
   background-color: var(--main-color);
 }
-
+.work-profile > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .work-profile h2 {
   margin: 0px 0px 50px 0px;
   font-weight: bold;
@@ -263,21 +277,21 @@ img {
 .work-profile-images {
   display: flex;
   justify-content: space-between;
-
-  margin-bottom: 94px;
 }
 
 /* стили для секции наша команда*/
 .our-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--secondary-decor-color);
+}
+.our-team > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  background-color: var(--secondary-decor-color);
 }
-
 .our-team h2 {
-  margin-top: 94px;
+  margin: 0px;
   margin-bottom: 50px;
 
   font-weight: bold;
@@ -292,10 +306,9 @@ img {
 .our-team h2::first-letter {
   text-transform: capitalize;
 }
-.our-team > ul {
+.card {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 94px;
 }
 
 .card > li {
@@ -309,7 +322,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.our-team div {
+.card div {
   margin-top: 30px;
   margin-bottom: 16px;
 }
@@ -370,19 +383,22 @@ img {
 }
 /*Стили для секции постоянные клиенты*/
 .constant-client {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.constant-client > div {
   display: flex;
   flex-direction: column;
   align-content: space-between;
 }
 .constant-client h2 {
-  margin-top: 94px;
+  margin: 0px;
   align-self: center;
 }
 .constant-client ul {
   display: flex;
   width: 170px;
-  height: 90px;
-  margin-bottom: 94px;
+  margin-top: 50px;
 }
 .constant-client li:not(:first-child) {
   margin-left: 30px;
@@ -391,7 +407,7 @@ img {
   display: flex;
   padding: 0px;
   width: 170px;
-  height: 90px;
+
   border: 1px solid;
   border-radius: 4px;
   border-color: var(--team-contacts);
@@ -401,19 +417,21 @@ img {
   width: 170px;
   height: 90px;
 }
-.constant-client a:hover {
+.constant-client a:hover,
+.constant-client a:focus {
   border-color: var(--accent-color);
   fill: var(--accent-color);
 }
 /*стили для секции подвал*/
 .footer-site {
-  display: flex;
-
   background-color: var(--first-decor-color);
   font-weight: normal;
 
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer-site > div {
+  display: flex;
 }
 .address {
   width: 231px;
@@ -492,11 +510,12 @@ img {
   flex-direction: column;
   align-items: center;
   background-color: var(--main-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .portfolio-filters {
   display: flex;
   justify-content: center;
-  margin-top: 94px;
   margin-bottom: 50px;
 }
 
@@ -539,7 +558,6 @@ img {
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
-  margin-bottom: 94px;
 }
 .item {
   margin-top: 30px;
@@ -551,12 +569,14 @@ img {
   width: 370px;
   height: 404px;
 }
-.item:hover {
+.item:hover,
+.item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .item div {
-  margin: 20px 24px;
+  width: 370px;
+  padding: 20px 24px;
 }
 .item h3 {
   margin: 0px;
