@@ -632,21 +632,13 @@ img {
   margin-left: 30px;
   flex-basis: calc(100% / 3 - 30px);
   background: var(--main-color);
-
-  box-sizing: border-box;
-
-  box-shadow: none;
-
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .item a > div {
   width: 370px;
   position: relative;
   overflow: hidden;
 }
-.item d .item a:hover .item-overlay,
+.item a:hover .item-overlay,
 .item a:focus .item-overlay {
   transform: translatey(0);
 }
@@ -675,12 +667,19 @@ img {
   letter-spacing: 0.03em;
   color: var(--main-color);
 }
+.item a {
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
 
-.item:hover,
-.item:focus {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.item > a:hover,
+.item > a:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  background-color: #2196f3;
 }
 
 .item-name {
