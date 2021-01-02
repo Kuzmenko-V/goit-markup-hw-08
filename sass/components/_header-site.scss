@@ -1,0 +1,79 @@
+.header-site {
+  background-color: $main-color;
+  border: 1px solid $border-head-color;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  /* or 114% */
+  letter-spacing: 0.02em;
+}
+.header-site > div {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-links-pages {
+  display: flex;
+  align-self: flex-end;
+
+  margin-left: 93px;
+  height: 48px;
+}
+.header-links-pages a {
+  color: $title-text-color;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-links-pages li {
+  margin-right: 50px;
+}
+.header-links-pages p {
+  margin: 0;
+}
+.header-links-pages p::first-letter {
+  text-transform: capitalize;
+}
+
+.header-links-contacts {
+  display: flex;
+  align-items: center;
+}
+.header-links-contacts li:not(:last-child) {
+  margin-right: 50px;
+}
+.header-links-contacts a {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  fill: $text-color;
+  color: $text-color;
+
+  transition-property: fill, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.envelope svg {
+  width: 16px;
+  height: 20px;
+  margin-right: 10px;
+}
+.smartphone svg {
+  width: 10px;
+  height: 20px;
+  margin-right: 10px;
+}
+.header-links-contacts a:visited {
+  color: $text-color;
+}
+.header-site a:hover,
+.header-site a:focus,
+.header-site a:active {
+  color: $accent-color;
+  fill: $accent-color;
+}

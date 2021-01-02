@@ -1,0 +1,24 @@
+button {
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: $title-text-color;
+}
+a:visited {
+  color: $title-text-color;
+}
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+}

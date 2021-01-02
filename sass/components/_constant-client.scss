@@ -1,0 +1,46 @@
+/*Стили для секции постоянные клиенты*/
+.constant-client {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.constant-client > div {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.constant-client h2 {
+  margin: 0px;
+  align-self: center;
+}
+.constant-client ul {
+  display: flex;
+  width: 170px;
+  margin-top: 50px;
+}
+.constant-client li:not(:first-child) {
+  margin-left: 30px;
+}
+.constant-client a {
+  display: flex;
+  padding: 0px;
+  width: 170px;
+
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: $team-contacts;
+  fill: $team-contacts;
+
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.constant-client svg {
+  width: 170px;
+  height: 90px;
+}
+.constant-client a:hover,
+.constant-client a:focus {
+  border-color: $accent-color;
+  fill: $accent-color;
+  outline: none;
+}
