@@ -1,5 +1,6 @@
 button {
   font-family: inherit;
+  font-style: inherit;
 }
 
 ul {
@@ -11,14 +12,40 @@ ul {
 a {
   text-decoration: none;
   color: $title-text-color;
+  &:visited {
+    color: $title-text-color;
+  }
 }
-a:visited {
-  color: $title-text-color;
-}
+
 address {
   font-style: normal;
 }
 
 img {
   display: block;
+}
+
+body {
+  font-family: $font-site;
+  font-style: normal;
+
+  min-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  margin: 0px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  /* or 117% */
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $title-text-color;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
 }

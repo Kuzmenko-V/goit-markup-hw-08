@@ -1,29 +1,54 @@
-.portfolio-item {
+.portfolio {
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
-  margin-bottom: 94px;
 }
-.item {
+.portfolio-item {
   margin-top: 30px;
   margin-left: 30px;
   flex-basis: calc(100% / 3 - 30px);
   background: $main-color;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover .portfolio-item-overlay,
+    &:focus .portfolio-item-overlay {
+      transform: translatey(0);
+    }
+  }
+
+  div {
+    width: 370px;
+    position: relative;
+    overflow: hidden;
+  }
 }
-.item a > div {
-  width: 370px;
-  position: relative;
-  overflow: hidden;
-}
-.item a:hover .item-overlay,
-.item a:focus .item-overlay {
-  transform: translatey(0);
-}
-.item-overlay {
+.portfolio-item-overlay {
   position: absolute;
   top: 0;
   left: 0;
+
+  margin: 0px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  /* or 156% */
+  letter-spacing: 0.03em;
+  color: $main-color;
   width: 370px;
   height: 294px;
   padding: 63px 24px;
@@ -34,68 +59,42 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.item-overlay {
-  margin: 0px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1.56;
-  /* or 156% */
-  letter-spacing: 0.03em;
-  color: $main-color;
-}
-.item a {
-  display: flex;
-  flex-direction: column;
-  box-shadow: none;
-
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.item > a:hover,
-.item > a:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.item-name {
+.portfolio-item-name {
   position: absolute;
-  width: 370px;
   padding: 20px 24px;
   background: $main-color;
   border: 1px solid $border-color;
-}
-.item h3 {
-  margin: 0px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 2;
-  /* identical to box height, or 200% */
-  letter-spacing: 0.06em;
-  color: $title-text-color;
-  text-transform: capitalize;
-}
 
-.item h4 {
-  margin: 0px;
-  margin-top: 4px;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.88;
-  /* identical to box height, or 188% */
-  letter-spacing: 0.03em;
-  color: $text-color;
-}
+  h3 {
+    margin: 0px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 2;
+    /* identical to box height, or 200% */
+    letter-spacing: 0.06em;
+    color: $title-text-color;
+    text-transform: capitalize;
+  }
 
-.item h4::first-letter {
-  text-transform: capitalize;
-}
+  h4 {
+    margin: 0px;
+    margin-top: 4px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.88;
+    /* identical to box height, or 188% */
+    letter-spacing: 0.03em;
+    color: $text-color;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
 
-.item span {
-  text-transform: lowercase;
-}
-.item .text-height {
-  text-transform: uppercase;
+  span {
+    text-transform: lowercase;
+  }
+
+  .text-height {
+    text-transform: uppercase;
+  }
 }
