@@ -6,18 +6,75 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  padding-top: 200px;
-  padding-bottom: 200px;
-
+  padding-top: 108px;
+  padding-bottom: 108px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  color: $main-color;
   background-color: $first-decor-color;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url('../images/bg-hero.jpg');
-  color: $main-color;
+    url('../images/bg_hero_m.jpg');
 
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/bg_hero_m@x2.jpg');
+  }
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/bg_hero_t.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/bg_hero_t@x2.jpg');
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/bg_hero_d.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/bg_hero_d@x2.jpg');
+    }
+  }
   > div {
     display: flex;
     flex-direction: column;
@@ -27,15 +84,24 @@
 
   h1 {
     display: inline-block;
-    width: 696px;
+    width: 100%;
     margin: 0px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    /* or 136% */
+    font-size: 26px;
+    line-height: 1.62;
+    /* or 162% */
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    @media screen and (min-width: 480px) {
+      width: 360px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+      /* or 136% */
+    }
   }
 
   button {

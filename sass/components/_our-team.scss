@@ -1,7 +1,11 @@
 /* стили для секции наша команда*/
 .our-team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   background-color: $secondary-decor-color;
 
   > div {
@@ -13,11 +17,42 @@
 
 .cards {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 2608px;
+    flex-direction: initial;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 768px) {
+    width: 738px;
+    height: 1102px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1170px;
+    height: 428px;
+  }
+  > li:not(:last-child) {
+    @media screen and (max-width: 479px) {
+      margin-bottom: 30px;
+    }
+  }
   > li {
+    display: inline-block;
     background-color: $main-color;
-    width: 270px;
+
+    @media screen and (min-width: 480px) {
+      width: 450px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
 
     background: #ffffff;
     /* material shadow v1 */

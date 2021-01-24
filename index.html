@@ -17,37 +17,48 @@
                 <!--Логотип ссылка-->
                 <a href="./index.html"><img src="./images/logo1.svg" alt="WebStudio"></a>
                 <!--Ссылки по сайту-->
-                <ul class="header-links-pages">
-                    <li><a class="site-page-current" href="./index.html">
-                            <p>студия</p>
-                        </a></li>
-                    <li><a href="./portfolio.html">
-                            <p>портфолио</p>
-                        </a></li>
-                    <li><a href="#contacts">
-                            <p>контакты</p>
-                        </a></li>
-                </ul>
-            </nav>
-            <!--Ссылки позвонить и отправить почту-->
-            <ul class="header-links-contacts">
-                <li>
-                    <a class="envelope" href="mailto:info@devstudio.com">
-                        <svg>
-                            <use href="./images/icon.svg#icon-envelope"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li>
-                    <a class="smartphone" href="tel:+380961111111">
-                        <svg>
-                            <use href="./images/icon.svg#icon-smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
+                <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                    <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
+                        <use class="icon-menu" href="./images/icon.svg#icon-menu"></use>
+                        <use class="icon-close-menu" href="./images/icon.svg#icon-close-menu"></use>
+                    </svg>
+                </button>
+                <div class="menu-container" id="menu-container" data-menu>
+                    <div class="header-navigation">
+                        <!--Ссылки по сайту-->
+                        <ul class="header-links-pages"> 
+                            <li><a class="site-page-current" href="./index.html">
+                                    <p>студия</p>
+                                </a></li>
+                            <li><a href="./portfolio.html">
+                                    <p>портфолио</p>
+                                </a></li>
+                            <li><a href="#">
+                                    <p>контакты</p>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <!--Ссылки позвонить и отправить почту-->
+                    <ul class="header-links-contacts">
+                        <li>
+                            <a class="envelope" href="mailto:info@devstudio.com">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-envelope"></use>
+                                </svg>
+                                info@devstudio.com
+                            </a>
+                        </li>
+                        <li>
+                            <a class="smartphone" href="tel:+380961111111">
+                                <svg>
+                                    <use href="./images/icon.svg#icon-smartphone"></use>
+                                </svg>
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+                </div>                
+            </nav>           
         </div>
     </header>
     <!--Тело основной страници-->
@@ -109,15 +120,25 @@
                 <h2>чем мы занимаемся</h2>
                 <ul class="work-profile-items">
                     <li>
-                        <img width="370" src="./images/img_work_1.jpg" alt="Разработака">
+                        <picture>                            
+                            <source srcset="./images/img_work_1.webp 1x, ./images/img_work_1@x2.webp 2x" type="image/webp"/>
+                            <img srcset="./images/img_work_1.jpg 1x, ./images/img_work_1@x2.jpg 2x" src="./images/img_work_1.jpg" alt="Разработака">
+                        </picture>                        
                         <p class="work-profile-text">десктопные приложения</p>
                     </li>
                     <li>
-                        <img width="370" src="./images/img_work_2.jpg" alt="Дизайн">
+                        <picture>
+                            <source srcset="./images/img_work_2.webp 1x, ./images/img_work_2@x2.webp 2x" type="image/webp" />
+                            <img srcset="./images/img_work_2.jpg 1x, ./images/img_work_2@x2.jpg 2x" src="./images/img_work_1.jpg"
+                                alt="Дизайн">
+                        </picture>
                         <p class="work-profile-text">мобильные приложения</p>
                     </li>
                     <li>
-                        <img width="370" src="./images/img_work_3.jpg" alt="Стиль">
+                        <picture>
+                            <source srcset="./images/img_work_3.webp 1x, ./images/img_work_3@x2.webp 2x" type="image/webp" />
+                            <img srcset="./images/img_work_3.jpg 1x, ./images/img_work_3@x2.jpg 2x" src="./images/img_work_1.jpg" alt="Стиль">
+                        </picture>
                         <p class="work-profile-text">дизайнерские решения</p>
                     </li>
                 </ul>
@@ -129,7 +150,16 @@
                 <h2>наша команда</h2>
                 <ul class="cards">
                     <li>
-                        <img width="270" src="./images/img_worker_1.jpg" alt="Фото сотрудника">
+                        <picture>
+                            <source srcset="./images/img_worker_1_m.webp 1x, ./images/img_worker_1_m@x2.webp 2x" media="(max-width:767px)" type="image/webp"/>
+                            <source srcset="./images/img_worker_1_m.jpg 1x, ./images/img_worker_1_m@x2.jpg 2x" media="(max-width:767px)"/>
+                            <source srcset="./images/img_worker_1_t.webp 1x, ./images/img_worker_1_t@x2.webp 2x" media="(max-width:1199px)" type="image/webp"/>
+                            <source srcset="./images/img_worker_1_t.jpg 1x, ./images/img_worker_1_t@x2.jpg 2x" media="(max-width:1199px)"/>
+                            <source srcset="./images/img_worker_1_d.webp 1x, ./images/img_worker_1_d@x2.webp 2x" media="(min-width:1200px)" type="image/webp"/>
+                            <source srcset="./images/img_worker_1_d.jpg 1x, ./images/img_worker_1_d@x2.jpg 2x" media="(min-width:1200px)"/>
+                             <img  src="./images/img_worker_1_m.jpg" 
+                        alt="Фото сотрудника">
+                        </picture>
                         <h3>игорь демьяненко</h3>
                         <h4 lang="en">product designer</h4>
                         <ul class="our-team-contacts">
@@ -164,7 +194,18 @@
                         </ul>
                     </li>
                     <li>
-                        <img width="270" src="./images/img_worker_2.jpg" alt="Фото сотрудника">
+                        <picture>
+                            <source srcset="./images/img_worker_2_m.webp 1x, ./images/img_worker_2_m@x2.webp 2x" media="(max-width:767px)"
+                                type="image/webp" />
+                            <source srcset="./images/img_worker_2_m.jpg 1x, ./images/img_worker_2_m@x2.jpg 2x" media="(max-width:767px)" />
+                            <source srcset="./images/img_worker_2_t.webp 1x, ./images/img_worker_2_t@x2.webp 2x" media="(max-width:1199px)"
+                                type="image/webp" />
+                            <source srcset="./images/img_worker_2_t.jpg 1x, ./images/img_worker_2_t@x2.jpg 2x" media="(max-width:1199px)" />
+                            <source srcset="./images/img_worker_2_d.webp 1x, ./images/img_worker_2_d@x2.webp 2x" media="(min-width:1200px)"
+                                type="image/webp" />
+                            <source srcset="./images/img_worker_2_d.jpg 1x, ./images/img_worker_2_d@x2.jpg 2x" media="(min-width:1200px)" />
+                            <img src="./images/img_worker_2_m.jpg" alt="Фото сотрудника">
+                        </picture>
                         <h3>ольга репина</h3>
                         <h4 lang="en">frontend developer</h4>
                         <ul class="our-team-contacts">
@@ -199,7 +240,18 @@
                         </ul>
                     </li>
                     <li>
-                        <img width="270" src="./images/img_worker_3.jpg" alt="Фото сотрудника">
+                        <picture>
+                            <source srcset="./images/img_worker_3_m.webp 1x, ./images/img_worker_3_m@x2.webp 2x" media="(max-width:767px)"
+                                type="image/webp" />
+                            <source srcset="./images/img_worker_3_m.jpg 1x, ./images/img_worker_3_m@x2.jpg 2x" media="(max-width:767px)" />
+                            <source srcset="./images/img_worker_3_t.webp 1x, ./images/img_worker_3_t@x2.webp 2x" media="(max-width:1199px)"
+                                type="image/webp" />
+                            <source srcset="./images/img_worker_3_t.jpg 1x, ./images/img_worker_3_t@x2.jpg 2x" media="(max-width:1199px)" />
+                            <source srcset="./images/img_worker_3_d.webp 1x, ./images/img_worker_3_d@x2.webp 2x" media="(min-width:1200px)"
+                                type="image/webp" />
+                            <source srcset="./images/img_worker_3_d.jpg 1x, ./images/img_worker_3_d@x2.jpg 2x" media="(min-width:1200px)" />
+                            <img src="./images/img_worker_3_m.jpg" alt="Фото сотрудника">
+                        </picture>
                         <h3>николай тарасов</h3>
                         <h4 lang="en">marketing</h4>
                         <ul class="our-team-contacts">
@@ -234,7 +286,18 @@
                         </ul>
                     </li>
                     <li>
-                        <img width="270" src="./images/img_worker_4.jpg" alt="Фото сотрудника">
+                        <picture>
+                            <source srcset="./images/img_worker_4_m.webp 1x, ./images/img_worker_4_m@x2.webp 2x" media="(max-width:767px)"
+                                type="image/webp" />
+                            <source srcset="./images/img_worker_4_m.jpg 1x, ./images/img_worker_4_m@x2.jpg 2x" media="(max-width:767px)" />
+                            <source srcset="./images/img_worker_4_t.webp 1x, ./images/img_worker_4_t@x2.webp 2x" media="(max-width:1199px)"
+                                type="image/webp" />
+                            <source srcset="./images/img_worker_4_t.jpg 1x, ./images/img_worker_4_t@x2.jpg 2x" media="(max-width:1199px)" />
+                            <source srcset="./images/img_worker_4_d.webp 1x, ./images/img_worker_4_d@x2.webp 2x" media="(min-width:1200px)"
+                                type="image/webp" />
+                            <source srcset="./images/img_worker_4_d.jpg 1x, ./images/img_worker_4_d@x2.jpg 2x" media="(min-width:1200px)" />
+                            <img src="./images/img_worker_4_m.jpg" alt="Фото сотрудника">
+                        </picture>
                         <h3>михаил ермаков</h3>
                         <h4 lang="en"><span>ui</span> designer</h4>
                         <ul class="our-team-contacts">
@@ -325,7 +388,6 @@
     <!--Подвал-->
     <footer class="footer-site">
         <div class="container">
-            <a name="contacts"></a>
             <!--Ссылка логотип-->
             <div class="address">
                 <a href="./index.html">
@@ -334,13 +396,13 @@
                 <!--Адрес компании-->
                 <address>
                     <ul class="address-company">
-                        <li><span>г. Киев, пр-т Леси Украинки, 26</span></li>
-                        <li><span>info@devstudio.com</span></li>
-                        <li><span>+38 096 111 11 11</span></li>
+                        <li><a href="#"><span>г. Киев, пр-т Леси Украинки, 26</span></a></li>
+                        <li><a href="mailto:info@devstudio.com"><span>info@devstudio.com</span></a></li>
+                        <li><a href="tel:+380961111111"><span>+38 096 111 11 11</span></a></li>
                     </ul>
                 </address>
             </div>
-            <div>
+            <div class="join">
                 <!--<h2></h2>-->
                 <h3>присоединяйтесь</h3>
                 <ul class="address-company-public">
@@ -436,6 +498,7 @@
           </form>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
    </body>
 </html>

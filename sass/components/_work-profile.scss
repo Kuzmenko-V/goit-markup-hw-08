@@ -1,7 +1,10 @@
 /* стили для секции виды работ*/
 .work-profile {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
   padding-bottom: 94px;
-
   background-color: $main-color;
 
   > div {
